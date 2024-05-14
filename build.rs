@@ -11,12 +11,12 @@ fn main() {
         .expect("Unable to generate bindings");
 
     // Create "dist"
-    if std::fs::create_dir("dist").is_err() {
-        println!("dist already exists");
+    if std::fs::create_dir("bindings").is_err() {
+        println!("bindings/ already exists");
     }
 
     // Write the bindings to the dist folder
-    let out_path = PathBuf::from("./dist");
+    let out_path = PathBuf::from("./bindings");
     bindings
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings!");

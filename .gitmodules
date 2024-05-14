@@ -1,0 +1,3 @@
+[submodule "ihslib"]
+	path = ihslib
+	url = https://github.com/mariotaku/ihslib.git
